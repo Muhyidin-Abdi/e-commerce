@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en"  data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>StopTens-AboutUs</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="index.ts">
+</head>
+
+<body class="p-0 m-0 border-0 bd-example m-0 border-0">
+
+<!-- Example Code -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="navbar-brand me-5" th:href= "@{/Home}">ShopTens</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item me-5" >
+                    <a class="nav-link active" aria-current="page" th:href="@{/Home}">Home</a>
+                </li>
+                <li class="nav-item me-5">
+                    <a class="nav-link" th:href="@{/AboutUs}">About us</a>
+                </li>
+                <li class="nav-item me-5">
+                    <a class="nav-link" th:href="@{/products}">Products</a>
+                </li>
+                <li class="nav-item me--5 ">
+                    <a class="nav-link" th:href="@{/Contact}">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+            <form class="d-flex" role="search">
+                <a class="btn btn-outline-success" th:href="@{/Login}">Sign Up</a>
+            </form>
+        </div>
+    </div>
+</nav>
+<section class="p-2 text-center  bg-dark-subtle text-dark-emphasis">
+    <div class="container mt-5">
+        <h1>ShopTens </h1>
+
+        <form class="py-3" role="search">
+            <a class="btn btn-outline-success bi-arrow-up bg-dark-subtle" th:href="@{/Login}">Sign Up</a>
+        </form>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-6">
+                <i class="bi bi-people-fill" style="font-size: 150px"></i>
+            </div>
+            <div class="col-lg-6 ">
+                <h1>About us </h1>
+                <p class=" lead">At ShopTens, we are passionate about providing our customers with high-quality products and exceptional service. Founded in 2015, our company has grown to become a leading online retailer, offering a wide range of products across various categories including electronics, home goods, apparel, and more.<br> <br>  Our mission is to make shopping convenient and enjoyable for our customers. We carefully curate our product selection to ensure we are offering the best items on the market, sourced from trusted brands and manufacturers. Whether you're looking for the latest tech gadget, a stylish piece of furniture, or the perfect gift, you can count on [Company Name] to have what you need. </p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="p-2  bg-dark-subtle text-dark-emphasis">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1>Our Services</h1>
+                <p class="lead">Here at ShopTens, we specialize in providing tailored e-commerce solutions that empower businesses to thrive online. Our comprehensive services include custom website design, seamless integration of payment gateways, and optimized product listings to enhance user experience and drive sales.<br> <br> We understand the unique needs of each business, which is why we offer personalized consultations to develop strategies that align with your goals. Whether you're launching a new store or looking to improve an existing one, our expert team is dedicated to delivering results that exceed your expectations. Let us help you transform your online presence and achieve sustainable growth in the digital marketplace.</p>
+            </div>
+            <div class="col-6 text-center">
+                <i class="bi bi-person" style="font-size: 150px"></i>
+                <form class="py-xxl-5" role="search">
+                    <a class="btn btn-outline-success px-4 bi-activity" th:href="@{/Login}">Consult Us</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-5">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-6">
+                <img src="map.jpg" alt="map" width="70%" height="80%">
+            </div>
+            <div class="col-lg-6 ">
+                <h1>Where to find us </h1>
+                <p class=" lead">At ShopTens, we are passionate about providing our customers with high-quality products and exceptional service. Founded in 2015, our company has grown to become a leading online retailer, offering a wide range of products across various categories including electronics, home goods, apparel, and more.<br> <br>  Our mission is to make shopping convenient and enjoyable for our customers. We carefully curate our product selection to ensure we are offering the best items on the market, sourced from trusted brands and manufacturers. Whether you're looking for the latest tech gadget, a stylish piece of furniture, or the perfect gift, you can count on [Company Name] to have what you need. </p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary ">© 2024 ShopTens, Inc </span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <i class="bi bi-instagram px-4"></i>
+            <i class="bi bi-twitter-x"></i>
+
+        </ul>
+    </footer>
+</div>
+
+<!-- End Example Code -->
+<script src="script.js"></script>
+</body>
+</html>
