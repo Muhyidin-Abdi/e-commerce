@@ -1,5 +1,6 @@
 package dev.muhidin.ecommerce.Admin;
 
+import dev.muhidin.ecommerce.Message.MessageService;
 import dev.muhidin.ecommerce.Order.Order;
 import dev.muhidin.ecommerce.Order.OrderService;
 import dev.muhidin.ecommerce.Product.Product;
@@ -27,6 +28,9 @@ public class AdminController {
 
     private User user; //need this var to keep track of user in the last 2 controllers
 
+    @Autowired
+    private MessageService messageService;
+
     @GetMapping("/verifyLogin")
     public  String ValidateAcc (@ModelAttribute ("Admin") Admin admin, Model model) { // model acts like middleware blw view and controller
         if(adminServices.ValidateAcc(admin.getEmail(),admin.getPassword())){
@@ -41,11 +45,8 @@ public class AdminController {
         model.addAttribute("UserList",userService.getALLUser());
         model.addAttribute("ProductList",productService.getALLProducts());
         model.addAttribute("OrderList",orderService.getALLOrders());
+        model.addAttribute("messagesList",messageService.getALLMessage());
         return "AdminHomePage";
-    }
-    @GetMapping("/add/admin")
-    public String CreateAdmin(){
-        return "AddAdmin";
     }
     @PostMapping("/add/admin")
     public String CreateAdmin(Admin admin){

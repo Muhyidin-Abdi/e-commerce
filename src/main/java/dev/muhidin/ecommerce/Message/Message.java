@@ -1,5 +1,6 @@
 package dev.muhidin.ecommerce.Message;
 
+import dev.muhidin.ecommerce.User.User;
 import jakarta.persistence.*;
 
 @Entity
@@ -12,6 +13,16 @@ public class Message {
     private Long id;
     private String name;
     private String email;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    private String userName; // User's name to display
 
     public String getContact() {
         return Contact;
