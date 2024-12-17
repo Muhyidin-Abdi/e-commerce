@@ -34,6 +34,10 @@ public class AdminController {
     @GetMapping("/verifyLogin")
     public  String ValidateAcc (@ModelAttribute ("Admin") Admin admin, Model model) { // model acts like middleware blw view and controller
         if(adminServices.ValidateAcc(admin.getEmail(),admin.getPassword())){
+            model.addAttribute("admin",new Admin());
+            model.addAttribute("user",new User());
+            model.addAttribute("product",new Product());
+
             return "redirect:/Admin/home";
         }
         model.addAttribute("error", "Invalid email or password");

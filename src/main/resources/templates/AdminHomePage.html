@@ -115,16 +115,16 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="/add/admin" method="post">
+                    <form th:action="@{/add/admin}" method="post">
                         <div class="mb-3">
-                            <label for="adminName" class="form-label">Admin Name</label>
-                            <input type="text" name="adminName" id="adminName" placeholder="Enter Admin Name..." class="form-control" minlength="3" required>
+                            <label  class="form-label">Admin Name</label>
+                            <input type="text" name="name" placeholder="Enter Admin Name..." class="form-control" minlength="3" required>
                         </div>
                         <div class="mb-3">
-                            <label for="adminEmail" class="form-label">Admin Email</label>
-                            <input type="email" name="adminEmail" id="adminEmail" placeholder="Enter Admin Email..." class="form-control" required>
+                            <label class="form-label">Admin Email</label>
+                            <input type="email" name="email"  placeholder="Enter Admin Email..." class="form-control" required>
                         </div>
-                        <input type="hidden" name="adminPassword" value="zxcvb"/>
+                        <input type="hidden" name="password" value="zxcvb"/>
                         <div class="d-flex justify-content-end">
                             <button type="submit" class="btn btn-success">Add Admin</button>
                         </div>
@@ -181,16 +181,16 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form action="/add/admin" method="post">
+                        <form th:action="@{/add/user}" method="post">
                             <div class="mb-3">
-                                <label for="UserName" class="form-label">User Name</label>
-                                <input type="text" name="adminName" id="UserName" placeholder="Enter User Name..." class="form-control" minlength="3" required>
+                                <label  class="form-label">User Name</label>
+                                <input type="text" name="name"  placeholder="Enter User Name..." class="form-control" minlength="3" required>
                             </div>
                             <div class="mb-3">
-                                <label for="UserEmail" class="form-label">User Email</label>
-                                <input type="email" name="adminEmail" id="UserEmail" placeholder="Enter User Email..." class="form-control" required>
+                                <label  class="form-label">User Email</label>
+                                <input type="email" name="email" placeholder="Enter User Email..." class="form-control" required>
                             </div>
-                            <input type="hidden" name="adminPassword" value="zxcvb"/>
+                            <input type="hidden" name="password" value="zxcvb"/>
                             <div class="d-flex justify-content-end">
                                 <button type="submit" class="btn btn-success">Add User</button>
                             </div>
@@ -246,18 +246,22 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form action="/add/admin" method="post">
+                        <form th:action="@{/add/product}" method="post">
                             <div class="mb-3">
-                                <label for="ProductName" class="form-label">Product Name</label>
-                                <input type="text" name="adminName" id="ProductName" placeholder="Enter User Name..." class="form-control" minlength="3" required>
+                                <label  class="form-label">Product Name</label>
+                                <input type="text" name="name" placeholder="Enter product Name..." class="form-control" minlength="3" required>
                             </div>
                             <div class="mb-3">
-                                <label for="ProductPrice" class="form-label">Product Price</label>
-                                <input type="text" name="adminEmail" id="ProductPrice" placeholder="Enter User Price..." class="form-control" required>
+                                <label  class="form-label">Product Price</label>
+                                <input type="text" name="price"  placeholder="Enter product Price..." class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label  class="form-label">Product imageUrl</label>
+                                <input type="text" name="imageUrl"  placeholder="Enter Product imageUrl..." class="form-control" required>
                             </div>
 
                             <div class="d-flex justify-content-end">
-                                <button type="submit" class="btn btn-success">Add User</button>
+                                <button type="submit" class="btn btn-success">Add Product</button>
                             </div>
                         </form>
                     </div>

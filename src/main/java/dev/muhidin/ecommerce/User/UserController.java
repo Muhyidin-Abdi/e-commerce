@@ -15,10 +15,6 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/add/user")
-    public String AddUser() {
-        return "addUser";
-    }
     @PostMapping("/add/user")
     public String UpdateUser(User user) {
       userService.CreateUser(user);

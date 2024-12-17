@@ -11,6 +11,7 @@ public class Product {
     private String name;
     private double price;
     private String description;
+    private String imageUrl;
 
     public String getImageUrl() {
         return imageUrl;
@@ -20,7 +21,7 @@ public class Product {
         this.imageUrl = imageUrl;
     }
 
-    private String imageUrl;
+
 
     public Long getId() {
         return id;
