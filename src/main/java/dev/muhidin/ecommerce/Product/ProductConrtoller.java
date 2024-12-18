@@ -33,7 +33,7 @@ public class ProductConrtoller {
     @GetMapping("/update/product/{id}")
     public String  updateProduct (@PathVariable Long id, Model model){
        model.addAttribute("product", productservice.getProductById(id));
-        return "redirect:/updateProduct";
+        return "UpdateProduct";
     }
     @PostMapping("/update/product")
     public String updateProduct (Product product){

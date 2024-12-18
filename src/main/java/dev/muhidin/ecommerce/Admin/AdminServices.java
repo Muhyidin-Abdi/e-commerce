@@ -1,7 +1,9 @@
 package dev.muhidin.ecommerce.Admin;
 
 import dev.muhidin.ecommerce.User.User;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,6 +13,7 @@ public class AdminServices {
 
     @Autowired
     private AdminRepo adminRepo;
+
 
     public List<Admin> getALLAdmin() {
     return  adminRepo.findAll();
@@ -24,6 +27,7 @@ public class AdminServices {
     }
     public void CreateAdmin(Admin admin) {
         adminRepo.save(admin);
+        adminRepo.resetAdminIdSequence();
     }
 
     public void DeleteAdmin(long id) {

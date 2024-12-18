@@ -1,7 +1,5 @@
 package dev.muhidin.ecommerce.User;
 
-import dev.muhidin.ecommerce.Admin.Admin;
-import jakarta.servlet.http.PushBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,15 +12,19 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class UserController {
     @Autowired
     private UserService userService;
+    @Autowired
+    private UserRepo userRepo;
 
     @PostMapping("/add/user")
     public String UpdateUser(User user) {
       userService.CreateUser(user);
-      return "LoginPage";
+      userRepo.resetUserSequence();
+      return "redirect:/Admin/home";
     }
+
     @GetMapping("/update/user/{id}")
-    public String UpdateUser(@PathVariable Long id, Model model){
-        model.addAttribute("Admin",userService.getUserById(id));
+    public String UpdateUser(@PathVariable("id") Long id, Model model){
+        model.addAttribute("user", userService.getUserById(id));
         return "UpdateUser";
     }
     @PostMapping("/update/user")

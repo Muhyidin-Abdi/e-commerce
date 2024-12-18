@@ -60,13 +60,13 @@
             </form>
         </div>
     </div>
-    </div>
 </nav>
 <main>
-<div class="container my-4">
-    <div class="d-flex justify-content-start mb-4">
-        <a class="btn btn-outline-secondary " href="/Home"><i class="fa-solid fa-arrow-left"></i>Back</a>
-    </div>
+    <section>
+    <div class="container my-4">
+            <div class="d-flex justify-content-start mb-4">
+            <a class="btn btn-outline-secondary " href="/Home"><i class="fa-solid fa-arrow-left"></i>Back</a>
+              </div>
 <!-- adminpart  -->
     <div class= mb-5>
         <h2 class="text-center mb3">Admins</h2>
@@ -90,11 +90,11 @@
                     <td th:text="${admin.password}"></td>
                     <td>
                         <!-- Update Button -->
-                        <a class="btn btn-sm btn-bd-accent" th:href="@{/UpdateAdmin/{id}(id=${admin.id})}" >
+                        <a class="btn btn-sm btn-bd-accent" th:href="@{/update/admin/{id}(id=${admin.id})}" >
                             <i class="fa-solid fa-pen"></i>
                         </a>
                         <!-- Delete Button -->
-                        <a class="btn btn-sm btn-bd-light" th:href="@{/deleteAdmin/{id}(id=${admin.id})}">
+                        <a class="btn btn-sm btn-bd-light" th:href="@{/delete/admin/{id}(id=${admin.id})}">
                             <i class="fa-solid fa-trash"></i>
                         </a>
                     </td>
@@ -157,11 +157,11 @@
                     <td th:text="${user.password}"></td>
                     <td>
                         <!-- Update Button -->
-                        <a class="btn btn-sm btn-bd-accent " th:href="@{/UpdateUser/{id}(id=${user.id})}">
+                        <a class="btn btn-sm btn-bd-accent " th:href="@{/update/user/{id}(id=${user.id})}">
                             <i class="fa-solid fa-pen"></i>
                         </a>
                         <!-- Delete Button -->
-                        <a class="btn btn-sm btn-danger" th:href="@{/deleteUser/{id}(id=${user.id})}">
+                        <a class="btn btn-sm btn-bd-light" th:href="@{/delete/User/{id}(id=${user.id})}">
                             <i class="fa-solid fa-trash"></i>
                         </a>
                     </td>
@@ -225,7 +225,7 @@
                             <i class="fa-solid fa-pen"></i>
                         </a>
                         <!-- Delete Button -->
-                        <a class="btn btn-sm btn-danger" th:href="@{/delete/product/{id}(id=${product.id})}">
+                        <a class="btn btn-sm btn-bd-light" th:href="@{/delete/product/{id}(id=${product.id})}">
                             <i class="fa-solid fa-trash"></i>
                         </a>
                     </td>
@@ -321,6 +321,8 @@
             </div>
         </div>
     </div>
+    </div>
+</section>
 </main>
 
 <div class="container">
@@ -338,6 +340,7 @@
         </ul>
     </footer>
 </div>
+
 
 
 

@@ -60,9 +60,10 @@ public class AdminController {
     @GetMapping("/update/admin/{id}")
     public String UpdateAdmin(@PathVariable Long id, Model model){
         model.addAttribute("Admin",adminServices.getAdminById(id));
-        return "UpdateUser";
+        return "UpdateAdmin";
     }
-    @PostMapping("/update/Admin")
+
+    @PostMapping("/update/admin")
     public String updateAdmin(Admin admin){
         adminServices.UpdateAdmin(admin);
         return "redirect:/Admin/home";
